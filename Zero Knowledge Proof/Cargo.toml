@@ -1,0 +1,9 @@
+[package]
+name = "range_proof"
+version = "0.1.0"
+authors = ["Lorenzo Zaccagnini"]
+edition = "2018"
+
+[dependencies]
+rand = "0.8.0"
+itertools = "0.10.0"

@@ -1,0 +1,7 @@
+[package]
+name = "zero_knowledge_homomorphic"
+version = "0.1.0"
+authors = ["Lorenzo Zaccagnini"]
+edition = "2018"
+
+[dependencies]
