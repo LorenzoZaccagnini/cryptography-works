@@ -75,7 +75,7 @@ fn lipmaa(val: u64) -> Result<(u64, u64, u64, u64), std::io::Error> {
         for j in 0..1000 {
             for k in 0..100 {
                 for l in 0..10 {
-                    if i ^ 2 + j ^ 2 + k ^ 2 + l ^ 2== val {
+                    if i.pow(2) + j.pow(2) + k.pow(2) + l.pow(2)== val {
                         return Ok((i, j, k, l))
                     }
                 }
@@ -132,10 +132,10 @@ fn positive_proof(g: u64, h: u64, x: u64, r: i128, n: u64) -> (u64, u64, u64, u6
 
     let r0: u64 = (r - r1 as i128 - r2 as i128 - r3 as i128) as u64;
 
-    let c0 = (mod_pow(g, x0 ^ 2, n) * mod_pow(h, r0, n)) % n;
-    let c1 = (mod_pow(g, x1 ^ 2, n) * mod_pow(h, r1, n)) % n;
-    let c2 = (mod_pow(g, x2 ^ 2, n) * mod_pow(h, r2, n)) % n;
-    let c3 = (mod_pow(g, x3 ^ 2, n) * mod_pow(h, r3, n)) % n;
+    let c0 = (mod_pow(g, x0.pow(2), n) * mod_pow(h, r0, n)) % n;
+    let c1 = (mod_pow(g, x1.pow(2), n) * mod_pow(h, r1, n)) % n;
+    let c2 = (mod_pow(g, x2.pow(2), n) * mod_pow(h, r2, n)) % n;
+    let c3 = (mod_pow(g, x3.pow(2), n) * mod_pow(h, r3, n)) % n;
 
     return (c0, c1, c2, c3);
 }
